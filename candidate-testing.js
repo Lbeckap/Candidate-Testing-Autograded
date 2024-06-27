@@ -11,23 +11,22 @@ let correctAnswer = "Sally Ride";
 let candidateAnswer = "";
 
 //TODO: Variables for Part 2
-let q1 = 'Who was the first American woman in space? '; //declare and initialize with question value
-let a1 = 'Sally Ride';
 
-let q2 = 'True or false: 5 kilometer == 5000 meters? ';
-let a2 = 'true';
+const questions = [
+  'Who was the first American woman in space? ', 
+  'True or false: 5 kilometer == 5000 meters? ', 
+  '(5 + 3)/2 * 10 = ? ', 
+  `Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? `, 
+  'What is the minimum crew size for the ISS? '
+]; 
 
-let q3 = '(5 + 3)/2 * 10 = ? ';
-let a3 = '40';
-
-let q4 = `Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? `;
-let a4 = 'Trajectory';
-
-let q5 = 'What is the minimum crew size for the ISS? ';
-let a5 = '3';
-
-const questions = [q1, q2, q3, q4, q5]; //declare and initialize array by evalutaing the variables. Maybe should have lsited the questions in the array instead?
-const correctAnswers = [a1, a2, a3, a4, a5];
+const correctAnswers = [
+  'Sally Ride',
+  'true',
+  '40',
+  'Trajectory',
+  '3'
+];
 const candidateAnswers = [];
 
 
