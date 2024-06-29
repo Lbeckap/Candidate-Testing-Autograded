@@ -41,10 +41,9 @@ function askQuestion() {
   for (let i = 0; i < questions.length; i++) { //let i = 0 is the initial expression, i < questions.length is the condition, and i++ is the update expression
     const formatedQuestion = `${i + 1}) ${questions[i]}`; //i is the counter and in the bracket refers to the array index. so it will display as 1) What...
     const userAnswer = require('readline-sync');
-    candidateAnswer= userAnswer.question(formatedQuestion);
+    candidateAnswer = userAnswer.question(formatedQuestion);
     candidateAnswers.push(candidateAnswer); //adding user's answer to the END of the array
-    console.log(`Your Answer: ${candidateAnswers[i]} 
-Correct Answer: ${correctAnswers[i]}\n`); //Display items at current index
+
   }
 }
 
@@ -68,6 +67,16 @@ function gradeQuiz(candidateAnswers) {
   }
 
   let grade = numberOfCorrectAnswers / numberOfQuestions * 100;  //TODO 3.2 use this variable to calculate the candidates score.
+
+  console.log(`\nCandidate Name: ${candidateName}`);
+
+  for (let i = 0; i < questions.length; i++) {
+  let  recap = `${i + 1}) ${questions[i]}
+Your Answer: ${candidateAnswers[i]}
+Correct Answer: ${correctAnswers[i]}
+`;
+console.log(recap);
+  }
 
   let gradeMsg = `>>> Overall Grade: ${grade}% (${numberOfCorrectAnswers} of ${numberOfQuestions} responses correct) <<<
 >>> Status: ${passOrFail} <<<`;
